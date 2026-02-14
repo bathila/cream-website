@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Bee Cream</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        honey: {
+                            100: '#FEF3C7',
+                            300: '#FCD34D',
+                            400: '#FBBF24',
+                            500: '#F59E0B',
+                            600: '#D97706',
+                            900: '#78350F',
+                        },
+                        midnight: '#111827',
+                        cream: '#FFFFF0',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-midnight text-cream font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 glass" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="text-3xl font-serif font-bold text-honey-500 tracking-wider">Bee<span
+                        class="text-white">Cream</span>.</a>
+
+                <div class="hidden md:flex space-x-10">
+                    <a href="index.html" class="text-honey-100 hover:text-honey-400 transition">Home</a>
+                    <a href="products.html" class="text-honey-100 hover:text-honey-400 transition">Products</a>
+                    <a href="about.html" class="text-honey-100 hover:text-honey-400 transition">Our Story</a>
+                    <a href="contact.html" class="text-honey-100 hover:text-honey-400 transition">Contact</a>
+                </div>
+
+                <div class="hidden md:block">
+                    <a href="products.html"
+                        class="px-6 py-2 rounded-full bg-gradient-to-r from-honey-500 to-honey-600 text-white font-semibold hover:shadow-[0_0_20px_rgba(245,158,11,0.5)] transition duration-300">
+                        Shop Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-honey-400 focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass absolute w-full left-0 top-20 border-t border-gray-800">
+            <div class="px-6 py-4 space-y-4 flex flex-col items-center">
+                <a href="index.html" class="text-lg text-honey-100 hover:text-honey-400">Home</a>
+                <a href="products.html" class="text-lg text-honey-100 hover:text-honey-400">Products</a>
+                <a href="about.html" class="text-lg text-honey-100 hover:text-honey-400">Our Story</a>
+                <a href="contact.html" class="text-lg text-honey-100 hover:text-honey-400">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pt-32 pb-12 text-center bg-gradient-to-b from-black to-midnight relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=2000&q=80"
+                class="w-full h-full object-cover">
+        </div>
+        <div class="relative z-10">
+            <h1 class="text-4xl md:text-6xl font-serif font-bold text-honey-100 mb-4">Our Collection</h1>
+            <p class="text-gray-400 max-w-xl mx-auto text-lg">Small batch, hand-crafted skincare straight from the hive.
+            </p>
+        </div>
+    </header>
+
+    <!-- Product Grid -->
+    <section class="py-12 px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Product Card 1 -->
+            <div
+                class="bg-gray-900 rounded-2xl overflow-hidden shadow-2xl hover:shadow-[0_0_20px_rgba(245,158,11,0.2)] transition duration-300 group border border-gray-800">
+                <div class="h-64 bg-gray-800 relative overflow-hidden flex items-center justify-center group">
+                    <div class="absolute inset-0 bg-honey-500 opacity-0 group-hover:opacity-10 transition duration-500">
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?auto=format&fit=crop&w=1000&q=80"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-white">Royal Jelly Night Balm</h3>
+                        <span class="text-honey-400 font-bold text-lg">$45.00</span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6">Intense overnight hydration.</p>
+                    <button
+                        class="w-full py-3 bg-honey-600 hover:bg-honey-500 text-white font-semibold rounded-lg transition duration-300">Add
+                        to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product Card 2 (Featured) -->
+            <div
+                class="bg-gray-900 rounded-2xl overflow-hidden shadow-2xl hover:shadow-[0_0_20px_rgba(245,158,11,0.2)] transition duration-300 group border border-honey-900/50 relative">
+                <div class="absolute top-4 right-4 bg-honey-500 text-xs font-bold text-black px-2 py-1 rounded z-10">
+                    BEST SELLER</div>
+                <div class="h-64 bg-gray-800 relative overflow-hidden flex items-center justify-center">
+                    <img src="https://images.unsplash.com/photo-1556228720-19875164a275?auto=format&fit=crop&w=1000&q=80"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-white">Classic Bee Cream</h3>
+                        <span class="text-honey-400 font-bold text-lg">$38.00</span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6">The original daily moisturizer.</p>
+                    <button
+                        class="w-full py-3 bg-honey-500 hover:bg-honey-400 text-white font-semibold rounded-lg transition duration-300 shadow-[0_4px_14px_0_rgba(245,158,11,0.39)]">Add
+                        to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div
+                class="bg-gray-900 rounded-2xl overflow-hidden shadow-2xl hover:shadow-[0_0_20px_rgba(245,158,11,0.2)] transition duration-300 group border border-gray-800">
+                <div class="h-64 bg-gray-800 relative overflow-hidden flex items-center justify-center">
+                    <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=1000&q=80"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-white">Honey Glow Serum</h3>
+                        <span class="text-honey-400 font-bold text-lg">$55.00</span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6">Brightening vitamin C & honey.</p>
+                    <button
+                        class="w-full py-3 bg-honey-600 hover:bg-honey-500 text-white font-semibold rounded-lg transition duration-300">Add
+                        to Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-black py-12 mt-20 border-t border-gray-900 text-center">
+        <p class="text-gray-500 text-sm">&copy; 2024 Bee Cream Co.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Bee Cream</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        honey: {
+                            100: '#FEF3C7',
+                            300: '#FCD34D',
+                            400: '#FBBF24',
+                            500: '#F59E0B',
+                            600: '#D97706',
+                            900: '#78350F',
+                        },
+                        midnight: '#111827',
+                        cream: '#FFFFF0',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-midnight text-cream font-sans antialiased overflow-x-hidden flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 glass" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="text-3xl font-serif font-bold text-honey-500 tracking-wider">Bee<span
+                        class="text-white">Cream</span>.</a>
+
+                <div class="hidden md:flex space-x-10">
+                    <a href="index.html" class="text-honey-100 hover:text-honey-400 transition">Home</a>
+                    <a href="products.html" class="text-honey-100 hover:text-honey-400 transition">Products</a>
+                    <a href="about.html" class="text-honey-100 hover:text-honey-400 transition">Our Story</a>
+                    <a href="contact.html" class="text-honey-100 hover:text-honey-400 transition">Contact</a>
+                </div>
+
+                <div class="hidden md:block">
+                    <a href="products.html"
+                        class="px-6 py-2 rounded-full bg-gradient-to-r from-honey-500 to-honey-600 text-white font-semibold hover:shadow-[0_0_20px_rgba(245,158,11,0.5)] transition duration-300">
+                        Shop Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-honey-400 focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass absolute w-full left-0 top-20 border-t border-gray-800">
+            <div class="px-6 py-4 space-y-4 flex flex-col items-center">
+                <a href="index.html" class="text-lg text-honey-100 hover:text-honey-400">Home</a>
+                <a href="products.html" class="text-lg text-honey-100 hover:text-honey-400">Products</a>
+                <a href="about.html" class="text-lg text-honey-100 hover:text-honey-400">Our Story</a>
+                <a href="contact.html" class="text-lg text-honey-100 hover:text-honey-400">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex-grow flex items-center justify-center p-6 pt-32 relative">
+        <!-- Background Elements -->
+        <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-honey-600/20 rounded-full blur-[100px]"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-honey-400/10 rounded-full blur-[100px]"></div>
+
+        <div class="w-full max-w-lg glass p-8 rounded-3xl shadow-2xl relative z-10">
+            <h1 class="text-3xl font-serif font-bold mb-2 text-center text-white">Get in Touch</h1>
+            <p class="text-center text-gray-400 mb-8">Questions? Collaborations? We'd love to hear from you.</p>
+
+            <form class="space-y-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-300 mb-1">Name</label>
+                    <input type="text"
+                        class="w-full bg-black/40 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-honey-500 focus:ring-1 focus:ring-honey-500 transition placeholder-gray-600"
+                        placeholder="Your Name">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-300 mb-1">Email</label>
+                    <input type="email"
+                        class="w-full bg-black/40 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-honey-500 focus:ring-1 focus:ring-honey-500 transition placeholder-gray-600"
+                        placeholder="your@email.com">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-300 mb-1">Message</label>
+                    <textarea rows="4"
+                        class="w-full bg-black/40 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-honey-500 focus:ring-1 focus:ring-honey-500 transition placeholder-gray-600"
+                        placeholder="How can we help?"></textarea>
+                </div>
+                <button type="button"
+                    class="w-full bg-honey-600 hover:bg-honey-500 text-white font-bold py-3 rounded-lg transition duration-300 shadow-lg hover:shadow-honey-500/30">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
